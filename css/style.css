@@ -1,0 +1,90 @@
+body{
+    background: linear-gradient(45deg,#e442d085 ,#f5e0f3);
+    text-align: center;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 7vw;
+    color: #e85bd7;
+    text-shadow: 15px 10px aliceblue;
+}
+
+.todos{
+    text-align: center;
+    background-image: linear-gradient(#ea57b6e0 ,#ece3ece3 ) , url(../imges/bg.jpg);
+    border-top: 12px solid #daa710a6;
+    font-size: 1vw;
+    min-height: 500px;
+}
+
+.card{
+    width: 60vw;
+    border: 3px solid pink;
+    margin: 50px auto;
+    border-radius: 0px 50px;
+    box-shadow: 15px 20px #f8f9fa30;
+    background-color: #e8c6dd87 !important;
+}
+/*headrer of card*/
+.card-header{
+    font-family: 'Cairo', sans-serif;
+    font-size: 2vw;
+    color: #dc5ebb;
+    text-shadow: 3px 3px #daa710a6;
+}
+.card-text{
+    font-family: 'Grandstander', cursive;
+    color:#4a1158
+}
+.btn-outline-primary {
+    background-color: #d27dbe8f;
+    color: rgb(0 0 0 / 35%);
+    border-radius: 5px;
+    border-color: #e483dc;
+    font-weight: bold!important;
+    font-size: 12px!important;
+    box-shadow: 0px 0px 4px 8px #ded29663;
+}
+
+.card-footer .btn {
+    font-size: 1vw;
+    margin-right: 20px;
+    min-width: 75px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.btn-outline-primary:hover ,.btn-outline-info:hover,
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+    color: #f8f2f9;
+    background-color: #e2a6d4;
+    border-color: #e8c8e1;
+}
+.btn-outline-primary:focus ,
+.btn-outline-info:focus,
+.btn-outline-info:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgb(244 208 240); 
+    background-color: #e2a6d4;
+    outline: 0;
+}
+
+.btn:active:focus, .btn:focus {
+    outline: none;
+    outline-offset: -2px;
+    color:#fff;
+    box-shadow: 0 0 0 0.1rem rgb(244 208 240);
+    }
+    .glyphicon{
+        top:3px;
+        left:0px;
+    padding:0px 6px;
+    }
+.card-footer .btn-outline-info{
+    border:none;
+    border-radius: 50%;
+    font-size: 2vw;
+    color:rgb(245 223 240);
+    min-width: 10px;
+    padding: 0px;
+    box-shadow: 1px 1px 7px 11px #f7f1d738;
+}
