@@ -1,15 +1,19 @@
 import FetchData from "./utils.js"
 
 
-
-
 window.addEventListener('load', () =>{
     let todos = [];
     const todos_container = document.querySelector('.todos')
+    
     FetchData.getAll()
     .then(response => response.json())
-    .then(data =>{
-        todos = data.map(el => ( `<div class="card mb-3">
+    .then(
+        data =>{ 
+            if(data.message) {
+               console.log(data.message)
+               $(".msg").append(`${data.message}`);
+            }else{
+            todos = data.map(el => ( `<div class="card mb-3">
             <div class="card-header ">${el.title}</div>
             <div class="card-body ">
                 <p class="card-text">${el.description}</p>
@@ -21,34 +25,10 @@ window.addEventListener('load', () =>{
                 <label class="read-more-trigger btn btn-outline-info info" ><i class="glyphicon glyphicon-info-sign"></i></label>
                 </div>
         </div>`
-        ))
+        )  )}
         todos_container.innerHTML = todos.join("");
     }).catch(error => console.error(error))
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 $('body').on('click','.update',function(){
@@ -77,15 +57,6 @@ $('#update-to-do').click(function(){
 
 
 
-
-
-
-
-
-
-
-
-/*
 $('body').on('click', '.update', function () {
     var  id = $(this).attr('data-id');   
     $('#update-to-do').attr('data-id',id);  
@@ -108,7 +79,7 @@ $('body').on('click', '#update-to-do', function () {
     FetchData.updateTodo(id , 'update' , data);
     location.reload();
 });
-*/
+
 /* create Todo */
 $('#save-to-do').click(function(){    
 const data ={
@@ -125,23 +96,5 @@ $('body').on('click', '.delete', function () {
     var id = $(this).attr('id');
     FetchData.deleteTodo(id,`delete`);
     $(this).parent().parent().remove();
+    location.reload();
 });
-
-
-
-
-//const del = document.querySelector(".delete");
-/*
-const del = document.getElementsByClassName(".delete");
-console.log(del);
-del.addEventListener('click',()=>
-{
-FetchData.deleteTodo( id , `/delete/${id}` )
-.then(response => response.json())
-.then(id =>{console.log("deleted")})
-.catch(error => console.error(error))
-})
-
-
-
-*/

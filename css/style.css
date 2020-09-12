@@ -55,6 +55,14 @@ h1{
     margin-bottom: 10px;
     max-height: 4vw;  
   }
+.msg{
+    position: fixed;
+    top: 15vw;
+    right: 44vw;
+    font-size: 3vw;
+}
+
+
 /*
 .read-more-state:checked ~ .card-body {
     max-height: none;

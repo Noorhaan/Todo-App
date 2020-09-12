@@ -19,14 +19,4 @@ $('#myModal').on('shown.bs.modal', function () {
     }else{
     $(this).addClass('test');
   }
-  })
-
-
-
-
-  /*
-  .card-footer .star i
-  color: #daa710;
-    font-weight: bold;
-    text-shadow: 0 0 6px #503150;
-  */
+  });
