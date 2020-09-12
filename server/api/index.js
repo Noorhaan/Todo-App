@@ -2,6 +2,7 @@ const todos = require("./todos");
 const { reduce } = require("./todos");
 const uuid = require("uuid").v4();
 
+
 const viewAll = (req,res) =>{
     todos.length > 0?
     res.send(todos): res.send({message: "Sorry, there's no todos for now \u{1F60F}"})
@@ -16,11 +17,10 @@ const viewTodo = (req,res) =>{
 
 const createTodo = (req,res) =>{
     todos.push({
-        id: uuid,
+        id: Math.floor((Math.random() * 100) + 1),
         title:req.body.title ,
         description:req.body.description 
         });
-
 res.send({message:"Todo Created successfully"})
 }
 

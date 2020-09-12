@@ -6,33 +6,85 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Dancing+Script:wght@700&family=Grandstander:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Dancing+Script:wght@700&family=Grandstander:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
     <title>Todo App</title>
 </head>
 
 <body>
     <h1>Todo List</h1>
-    <div class="todos">
-        
+  <div class="secborder"> 
+    <div class="border">   
+       <button type="button" class="btn btn-primary add-btn" data-toggle="modal" data-target="#exampleModal">
+        <div class="sp">+</div>  
+      </button>
     </div>
+  </div>
+
+    <div class="todos">
+    
+    </div>
+    
+    <!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade my-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create A New Todo .. </h5>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-12">
+              <input type="text"  id="title" placeholder="Todo Titel">
+          </div>          
+          <div class="col-md-12">
+            <textarea  id="description" placeholder="Todo Description"></textarea>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cls" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary  " data-id="" id="save-to-do">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade my-modal" id="update-modale" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update youru Todo .. </h5>
+              </button>
+        </div>
+        <div class="modal-body">
+              <div class="col-md-12">
+                  <input type="text"  id="title_update">
+              </div>          
+              <div class="col-md-12">
+                <textarea  id="description_update"></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="cls" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary " data-id="" id="update-to-do">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="./js/custom.js"></script>
+    
+        <script src="./js/custom.js" type="module"></script>
          <script src="./js/main.js" type="module"></script>
 </body>
 

@@ -2,17 +2,20 @@ const todos = [
     {
         id: 1,
         title: "first one",
-        description: "description 1"
+        fav :'false' ,
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
     {
         id: 2,
         title: "second one",
-        description: "description 2"
+        fav :'false' ,
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
     {
         id: 3,
         title: "third one",
-        description: "description 3"
+        fav :'false' ,
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
 ];
 
