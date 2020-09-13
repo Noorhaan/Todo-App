@@ -6,6 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="./css/animated.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Dancing+Script:wght@700&family=Grandstander:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
@@ -13,11 +18,11 @@
 </head>
 
 <body>
-    <h1>Todo List</h1>
+    <h1 class="wow animate__animated animate__shakeX data-wow-offset" >Todo List</h1>
     
   <div class="secborder"> 
     <div class="border">   
-       <button type="button" class="btn btn-primary add-btn" data-toggle="modal" data-target="#exampleModal">
+       <button type="button" class="btn btn-primary add-btn animate__animated animate__rotateIn animate__delay-2s" data-wow-offset="3" data-toggle="modal" data-target="#exampleModal">
         <div class="sp">+</div>  
       </button>
     </div>
@@ -79,13 +84,18 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="Js/jquery-3.3.1.min.js"></script>
+        
+        <script src="Js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
         <script src="./js/custom.js" type="module"></script>
          <script src="./js/main.js" type="module"></script>
 </body>

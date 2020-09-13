@@ -22,3 +22,10 @@ content-type: application/json
     "title": "saasfasf",
     "description": "Wed, 21 asfasfasfa 2015 18:27:50 GMT"
 }
+###
+PUT http://localhost:3000/api/todos/updatefav/2 HTTP/1.1
+content-type: application/json
+  
+    {
+        "fav" : "false" 
+    }

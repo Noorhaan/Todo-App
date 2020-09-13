@@ -36,6 +36,12 @@ const updateTodo = (req,res) =>{
         res.send({message: "this todo doesn't existed!!! \u{1F641}"})
     }
 }
+const updatefav = (req,res) =>{
+    const todo = todos.filter((el) => el.id === parseInt(req.params.id))
+    todo[0].fav = req.body.fav;
+    res.send({message: "todo fav update succesfully"})
+    
+}
 
 const deleteTodo = (req,res) =>{ 
     const todo = todos.filter((el) => el.id === parseInt(req.params.id))
@@ -70,5 +76,5 @@ const deleteTodo = (req,res) =>{
    }
 
    module.exports = {
-       viewAll, viewTodo, createTodo , updateTodo ,deleteTodo,  notFound ,errorHandler
+       viewAll, viewTodo, createTodo , updateTodo ,deleteTodo,  notFound ,errorHandler ,updatefav
    }

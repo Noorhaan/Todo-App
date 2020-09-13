@@ -13,10 +13,3 @@ $('#myModal').on('shown.bs.modal', function () {
     }
   })
 
-  $('body').on('click','.star',function(){
-    if($(this).hasClass('test')){
-      $(this).removeClass('test');
-    }else{
-    $(this).addClass('test');
-  }
-  });

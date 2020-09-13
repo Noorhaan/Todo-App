@@ -2,6 +2,14 @@ body{
     background: linear-gradient(45deg,#e442d085 ,#f5e0f3);
     text-align: center;
 }
+
+
+
+
+/*
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    -webkit-text-fill-color: red;
+*/
 h1{
     font-family: 'Dancing Script', cursive;
     font-size: 7vw;
@@ -153,14 +161,29 @@ h1{
     height: 6vw;
     background-color: #f1a9e987;
     border: 9px solid #d67da44f;
+    transition: width 2s, height 2s , background-color 2s;
+}
+.add-btn:hover{
+    width: 7vw;
+    height: 7vw;
+    top: 6.5vw;
+    right: 4.5vw;
+    background-color: #f3bfeeec;
+    border: 9px solid #d67da44f;
 }
 
 .sp{
     position: relative;
     color:#f5d7f1;
-    font-size: 2vw;
+    font-size: 3vw;
+    transition: font-size 2s , color 7s;
+    
 }
-.add-btn:hover ,.add-btn:focus , .add-btn:active ,.btn-primary:active:hover
+.sp:hover{
+    font-size: 4.5vw;
+    color :#e15eadc2;
+}
+.add-btn:focus , .add-btn:active ,.btn-primary:active:hover
 {
     position: fixed;
     top: 7vw;
