@@ -67,7 +67,10 @@ h1{
     position: fixed;
     top: 15vw;
     right: 44vw;
-    font-size: 3vw;
+    font-size : 3vw;
+    color : #522b4d9e;
+    font-weight: bold;
+    font-family: cursive;
 }
 
 
@@ -76,11 +79,20 @@ h1{
     max-height: none;
   }*/
 /*on click star*/
+/*
 .test {
     color: #daa710 !important;
     font-weight: bold;
     text-shadow: 0 0 6px #503150;
 }
+*/
+label[fav="true"]
+{
+    color: #daa710 !important;
+    font-weight: bold;
+    text-shadow: 0 0 6px #503150;
+}
+
 .card-footer{
     margin-bottom: 1vw;
 }

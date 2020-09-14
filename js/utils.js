@@ -28,6 +28,16 @@ const updateTodo = (id, endpoint , body) => {
     })
 }
 
+const updatefav = (id, endpoint , body) => {
+    return fetch (`${BASE_URL}/${endpoint}/${id}` , {
+        method : "PUT" ,
+        headers : {
+            'Content-Type' : 'application/json'
+        },
+        body : JSON.stringify(body)
+    })
+}
+
 
 const deleteTodo = (id, endpoint ) => {
     return fetch (`${BASE_URL}/${endpoint}/${id}` , {
@@ -36,5 +46,5 @@ const deleteTodo = (id, endpoint ) => {
 }
 
 export default {
-    getAll , getTodo , createTodo , updateTodo , deleteTodo
+    getAll , getTodo , createTodo , updateTodo , deleteTodo ,updatefav
 }

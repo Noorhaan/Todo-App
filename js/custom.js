@@ -13,3 +13,15 @@ $('#myModal').on('shown.bs.modal', function () {
     }
   })
 
+  $('body').on('load',function(){
+    if($(this).hasClass('test')){
+      $(this).removeClass('test');
+    }else{
+    $(this).addClass('test');
+  }
+  });
+/*
+    if($(this).fav){
+   
+    $(this).fav = false ;
+    $(this).removeClass('test');        */

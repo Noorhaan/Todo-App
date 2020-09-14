@@ -6,6 +6,7 @@ const uuid = require("uuid").v4();
 const viewAll = (req,res) =>{
     todos.length > 0?
     res.send(todos): res.send({message: "Sorry, there's no todos for now \u{1F60F}"})
+console.log(todos)
 }
 
 const viewTodo = (req,res) =>{

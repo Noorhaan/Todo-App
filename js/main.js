@@ -19,7 +19,7 @@ window.addEventListener('load', () =>{
                 <p class="card-text">${el.description}</p>
             </div>
             <div class="card-footer">
-                <label type="button" class="btn btn-outline-info star" fav=${el.fav} data-id="${el.id}"><i class="glyphicon glyphicon-star-empty" id="bookmarkme"></i></label>       
+                <label type="button" class="btn btn-outline-info star" fav="${el.fav}" data-id="${el.id}"><i class="glyphicon glyphicon-star-empty" id="bookmarkme"></i></label>       
                 <button type="button" class="btn btn-outline-primary update" data-id="${el.id}" >Update</button>
                 <button type="button" class="btn btn-outline-primary delete" id="${el.id}">Delete</button>
                 <label class="read-more-trigger btn btn-outline-info info" ><i class="glyphicon glyphicon-info-sign"></i></label>
@@ -105,14 +105,15 @@ $('body').on('click', '.delete', function () {
 $('body').on('click','.star',function()
 { var id = $(this).attr('data-id')
   const fav =$(this).attr('fav');
-  console.log(typeof(fav))
-  const tru = {
-    fav : "true"
-}
+
   if(fav == "false"){
     $('.star').attr('fav',"true");
     $(this).addClass('test');
+    const tru = {
+        fav : "true"
+    }
     FetchData.updatefav(id,`updatefav`,tru);
+   
   } else{
     $('.star').attr('fav',"false");
     $(this).removeClass('test');
@@ -121,5 +122,6 @@ $('body').on('click','.star',function()
     }
     FetchData.updatefav(id,`updatefav`,fls);
   }
+  location.reload();
 })
 
