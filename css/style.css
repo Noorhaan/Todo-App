@@ -79,15 +79,8 @@ h1{
     max-height: none;
   }*/
 /*on click star*/
-/*
+
 .test {
-    color: #daa710 !important;
-    font-weight: bold;
-    text-shadow: 0 0 6px #503150;
-}
-*/
-label[fav="true"]
-{
     color: #daa710 !important;
     font-weight: bold;
     text-shadow: 0 0 6px #503150;

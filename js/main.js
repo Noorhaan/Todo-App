@@ -12,21 +12,30 @@ window.addEventListener('load', () =>{
             if(data.message) {
                console.log(data.message)
                $(".msg").append(`${data.message}`);
-            }else{
-            todos = data.map(el => (`<div class="card mb-3 wow animate__animated animate__fadeInLeft animate__slow">
-            <div class="card-header ">${el.title}</div>
+            }else{var i ;
+                for(i=0;i< data.length;i++)
+
+           { todos +=`<div class="card mb-3 wow animate__animated animate__fadeInLeft animate__slow">
+            <div class="card-header ">${data[i].title}</div>
             <div class="card-body ">
-                <p class="card-text">${el.description}</p>
-            </div>
-            <div class="card-footer">
-                <label type="button" class="btn btn-outline-info star" fav="${el.fav}" data-id="${el.id}"><i class="glyphicon glyphicon-star-empty" id="bookmarkme"></i></label>       
-                <button type="button" class="btn btn-outline-primary update" data-id="${el.id}" >Update</button>
-                <button type="button" class="btn btn-outline-primary delete" id="${el.id}">Delete</button>
+                <p class="card-text">${data[i].description}</p>
+            </div>`;
+            todos+= `<div class="card-footer">`
+            if(data[i].fav == "true"){
+                  todos +=   `<label type="button" class="btn btn-outline-info test star" fav="${data[i].fav}" data-id="${data[i].id}">
+             <i class="glyphicon glyphicon-star-empty" id="bookmarkme"></i></label>`      
+                              }
+            else{ todos +=   `<label type="button" class="btn btn-outline-info star" fav="${data[i].fav}" data-id="${data[i].id}">
+            <i class="glyphicon glyphicon-star-empty" id="bookmarkme"></i></label>`      
+        }                  
+          todos += `<button type="button" class="btn btn-outline-primary update" data-id="${data[i].id}" >Update</button>
+                <button type="button" class="btn btn-outline-primary delete" id="${data[i].id}">Delete</button>
                 <label class="read-more-trigger btn btn-outline-info info" ><i class="glyphicon glyphicon-info-sign"></i></label>
                 </div>
         </div>` 
-        ) ) 
-        todos_container.innerHTML = todos.join("");
+        
+          }
+        todos_container.innerHTML = todos;
     }   
     })
     
@@ -122,6 +131,5 @@ $('body').on('click','.star',function()
     }
     FetchData.updatefav(id,`updatefav`,fls);
   }
-  location.reload();
 })
 
