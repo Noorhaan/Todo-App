@@ -180,6 +180,8 @@ h1{
 .sp{
     position: relative;
     color:#f5d7f1;
+    right: 1vw;
+    bottom: 1vw;
     font-size: 3vw;
     transition: font-size 2s , color 7s;
     
